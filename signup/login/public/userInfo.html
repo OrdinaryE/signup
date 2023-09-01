@@ -1,0 +1,12 @@
+    <!-- Display Session Data -->
+    <h2>Session Data</h2>
+    <p>Username: <span id="sessionUsername"></span></p>
+    
+    <script>
+        // JavaScript 코드를 사용하여 세션 데이터를 가져와서 표시
+        fetch('/get-session')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sessionUsername').textContent = data;
+            });
+    </script>
