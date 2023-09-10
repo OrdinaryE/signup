@@ -1,0 +1,15 @@
+<!-- views/board.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>게시판</title>
+</head>
+<body>
+    <h1>게시판</h1>
+    <ul>
+        <% for (const post of posts) { %>
+            <li><a href="/board/<%= post.id %>"><%= post.title %></a></li>
+        <% } %>
+    </ul>
+</body>
+</html>
